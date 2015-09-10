@@ -1,0 +1,166 @@
+<html>
+<head>
+	<title>
+
+	</title>
+
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="cta.js"></script>
+</head>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		 <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+		<section class="section--white" style="margin-top: 250px;">
+			
+			<div class="tile-container">
+				<div class="tile" data-cta-target=".js-modal-1" data-disable-scroll=true>
+					<img src="ayuda.png" data-cta-target=".js-modal-1" data-disable-scroll=true>
+				</div>
+				<div class="tile" data-cta-target=".js-modal-2" data-disable-scroll=true>
+					<img src="costos.png" data-cta-target=".js-modal-2" data-disable-scroll=true>
+				</div>
+				<div class="tile" data-cta-target=".js-modal-3" data-disable-scroll=true>
+					<img src="documentos.png" data-cta-target=".js-modal-3" data-disable-scroll=true>
+				</div>
+				<div class="tile" data-cta-target=".js-modal-4" data-disable-scroll=true>
+					<img src="maquinas.png" data-cta-target=".js-modal-4" data-disable-scroll=true>
+				</div>
+				<div class="tile" data-cta-target=".js-modal-5" style="width: 16.666%" data-disable-scroll=true>
+					<img src="modulos.png" data-cta-target=".js-modal-5"  data-disable-scroll=true>	
+				</div>
+				<div class="tile" data-cta-target=".js-modal-3" data-disable-scroll=true>
+					<img src="fichatecnica.png" data-cta-target=".js-modal-3" data-disable-scroll=true>	
+				</div>
+				<div class="tile" data-cta-target=".js-modal-5" style="width: 16.666%" data-disable-scroll=true>
+					<img src="sena.png" data-cta-target=".js-modal-5"  data-disable-scroll=true>
+				</div>
+			</div>
+		</section>
+<!--  
+		<section class="section--white">
+			
+			<div class="btn" data-cta-target=".js-dialog" data-disable-scroll=true style="background: #4A90E2">Destruir</div>
+		</section>
+
+
+
+
+
+		<section class="section--white">
+			
+			<div class="btn" data-cta-target=".js-sidebar">Navegar</div>
+		</section>
+		<section class="section--white">
+			
+		</section>
+-->
+
+
+		
+		<div class="js-modal-1  modal  modal--1">
+			<span class="modal-close-btn"></span>
+			<h1>Visual Continuity</h1>
+				lorem
+			<div class="quote-box">
+				<div class="quote-box__bubble">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+				
+			</div>
+		</div>
+		<div class="js-modal-2  modal  modal--2">
+			<span class="modal-close-btn"></span>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+		<div class="js-modal-3  modal  modal--3">
+			<span class="modal-close-btn"></span>
+				<h1></h1>
+		</div>
+		<div class="js-modal-4  modal  modal--4">
+			<span class="modal-close-btn"></span>
+
+			<h1>Hierarchical timing</h1>
+			<div class="quote-box">
+				<div class="quote-box__bubble">When building a transition, consider the order and timing of the elements' movement. Ensure that motion supports the information hierarchy, conveying what content is most important by creating a path for the eye to follow.</div>
+				
+			</div>
+		</div>
+		<div class="js-modal-5  modal  modal--5">
+			<span class="modal-close-btn"></span>
+
+			<h1>Consistent choreography</h1>
+			<div class="quote-box">
+				<div class="quote-box__bubble">A well-choreographed app also provides teachable moments. When transitioning elements are coordinated, the user's understanding of the app grows. They "get" the app; they don't feel disoriented by the animation.</div>
+				
+			</div>
+		</div>
+
+		<div class="js-dialog  modal  dialog" style="text-align: center;">
+			<span class="modal-close-btn"></span>
+			<h3>Deseas Eliminar Usuario</h3>
+			<br>
+			<a onclick="closeShowingModal(); return;" class="btn  btn--blue">Si</a>
+			<a onclick="closeShowingModal(); return;" class="btn  btn--blue">No</a>
+
+		</div>
+
+		<div class="js-sidebar  modal sidebar">
+			<span class="modal-close-btn"></span>
+			<div class="sidebar__block" style="height:20%"></div>
+			<div class="sidebar__block" style="height:40%"></div>
+			<div class="sidebar__block" style="height:10%"></div>
+		</div>
+
+	
+
+
+
+
+
+<script>
+		var closeFn;
+		function closeShowingModal() {
+			var showingModal = document.querySelector('.modal.show');
+			if (!showingModal) return;
+			showingModal.classList.remove('show');
+			document.body.classList.remove('disable-mouse');
+			document.body.classList.remove('disable-scroll');
+			if (closeFn) {
+				closeFn();
+				closeFn = null;
+			}
+		}
+		document.addEventListener('click', function (e) {
+			var target = e.target;
+			if (target.dataset.ctaTarget) {
+				closeFn = cta(target, document.querySelector(target.dataset.ctaTarget), { relativeToWindow: true }, function showModal(modal) {
+					modal.classList.add('show');
+					document.body.classList.add('disable-mouse');
+					if(target.dataset.disableScroll){
+						document.body.classList.add('disable-scroll');
+					}
+				});
+			}
+			else if (target.classList.contains('modal-close-btn')) {
+				closeShowingModal();
+			}
+		});
+		document.addEventListener('keyup', function (e) {
+			if (e.which === 27) {
+				closeShowingModal();
+			}
+		})
+		</script>
+		<script async="true" type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</html>
